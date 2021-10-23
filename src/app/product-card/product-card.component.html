@@ -1,0 +1,23 @@
+<div class="card mt-5 mb-5 text-center product-card">
+    <div class="bg-image hover-overlay ripple p-4" data-mdb-ripple-color="light">
+        <img
+            [src]="product.photo"
+            class="img-fluid"
+            width="100"
+            [alt]="product.name"
+        />
+        <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
+    </div>
+    <div class="card-body ">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text" *ngIf="product.description; else noDescription">
+            {{product.description}}
+        </p>
+        <p>
+            <ng-template #noDescription> No description </ng-template>
+        </p>
+        <a href="#!" class="btn btn-dark">View <i class="ms-1 fas fa-eye"></i></a>
+    </div>
+</div>
