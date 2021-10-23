@@ -1,0 +1,31 @@
+<div class="container" style="height: 100vh;">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-md-5 col-sm-8">
+            <div *ngFor="let product of products">
+                <div class="card text-center">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img
+                        [src]="product.photo"
+                        class="img-fluid"
+                        width="100"
+                        height="100"
+                    />
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                    </div>
+                    <div class="card-body ">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text" *ngIf="product.description; else noDescription">
+                        {{product.description}}
+                    </p>
+                    <p>
+                        <ng-template #noDescription> No description </ng-template>
+                    </p>
+                    <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
