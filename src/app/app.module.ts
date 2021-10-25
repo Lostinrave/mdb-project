@@ -24,6 +24,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 
 
@@ -34,7 +35,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     NavBarComponent,
     HeaderComponent,
     FooterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
